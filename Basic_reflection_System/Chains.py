@@ -24,3 +24,8 @@ reflection_prompt = ChatPromptTemplate.from_messages(
         MessagesPlaceholder(variable_name="messages"),
     ]
 )
+
+llm = ChatGoogleGenerativeAI(model="gemini-flash-lite-latest")
+
+generation_chain = generation_prompt | llm
+reflection_chain = reflection_prompt | llm
