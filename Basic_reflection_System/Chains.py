@@ -28,10 +28,10 @@ reflection_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-# llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
-# generation_chain = generation_prompt | llm
-# reflection_chain = reflection_prompt | llm
+generation_chain = generation_prompt | llm
+reflection_chain = reflection_prompt | llm
 
 # result = generation_chain.invoke({ "messages": [ ("human", "Write a small tweet about earth") ] }) 
 
