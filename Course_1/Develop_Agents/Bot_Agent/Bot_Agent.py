@@ -26,6 +26,7 @@ llm = ChatGoogleGenerativeAI(
 # ----------------------------
 def process(state: AgentState) -> AgentState:
     response = llm.invoke(state["messages"])
+    print(f"state messages: {state['messages']}")
     print(f"\nAI: {response.content}")
     return state
 
