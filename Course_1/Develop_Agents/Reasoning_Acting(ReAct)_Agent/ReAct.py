@@ -42,6 +42,7 @@ def model_call(state:AgentState) -> AgentState:
         content="You are my AI assistant, please answer my query to the best of your ability."
     )
     response = model.invoke([system_prompt] + state["messages"])
+    # print(state)
     return {"messages": [response]}
 
 
